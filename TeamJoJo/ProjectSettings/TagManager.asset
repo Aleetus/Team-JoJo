@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - PauseMenu
+=======
+  - Enemy
+>>>>>>> 6034d0fbbd117bd8bc6ca10ff3291c39a5dddb6f
   layers:
   - Default
   - TransparentFX
