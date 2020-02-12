@@ -36,6 +36,6 @@ public class CrowdControl : MonoBehaviour
 
         }
 
-        if ((cc_NPC.collisionFlags & CollisionFlags.Sides) != 0) transform.Rotate(0, Random.Range(-180, 180), 0);
+        if ((cc_NPC.collisionFlags & CollisionFlags.Sides) != 0) transform.Rotate(0, Random.Range(0, 0), 0);
     }
 }
