@@ -1,31 +1,50 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
+    [SerializeField] private GameObject pauseMenuUI;
 
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private bool isPaused;
+
+    private void Update()
     {
-
-
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            print("ESCAPE KEY BEING PRESSED");
-
-            gameObject.SetActive(!gameObject.activeSelf);
-
+            isPaused = !isPaused;
         }
 
+        if (isPaused)
+        {
+            ActivateMenu();
+        }
+
+        else
+        {
+            DeactivateMenu();
+        }
     }
+    
+
+    void ActivateMenu()
+    {
+        Time.timeScale = 0;
+        AudioListener.pause = true;
+        pauseMenuUI.SetActive(true);
+    }
+
+    public void DeactivateMenu()
+    {
+        Time.timeScale = 1;
+        AudioListener.pause = false;
+        pauseMenuUI.SetActive(false);
+        isPaused = false;
+    }
+
 }
+
+
+  
+
