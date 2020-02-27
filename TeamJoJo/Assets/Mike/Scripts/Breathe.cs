@@ -27,7 +27,6 @@ public class Breathe : MonoBehaviour
         }
     }
 
-
     void ActivateMenu()
     {
         breatheEnabled.SetActive(true);
