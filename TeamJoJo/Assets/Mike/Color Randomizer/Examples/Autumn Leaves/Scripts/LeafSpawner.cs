@@ -66,12 +66,7 @@ public class LeafSpawner : MonoBehaviour {
 		                                             Random.Range(0f, 360f));
 		GameObject newLeaf = (GameObject)Instantiate(leafPrefab, spawnPos, randomRot);
 
-		// generate a random color and assign it to all renderers in the leaf
-		Color randomColor = colorRandomizer.RandomColor();
-		Renderer[] renderers = newLeaf.GetComponentsInChildren<Renderer>();
-		foreach (Renderer renderer in renderers) {
-			renderer.material.color = randomColor;
-		}
+
 
 		// add a random torque
 		Vector3 randomTorque = new Vector3(Random.Range(0f, maxTorque),
