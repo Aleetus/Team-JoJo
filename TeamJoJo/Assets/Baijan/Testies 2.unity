@@ -4129,6 +4129,7 @@ GameObject:
   - component: {fileID: 1513648908}
   - component: {fileID: 1513648910}
   - component: {fileID: 1513648911}
+  - component: {fileID: 1513648912}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -4209,6 +4210,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1513648912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513648907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e17722028f8aa4b459ad361cf3fdf830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1549337122
 GameObject:
   m_ObjectHideFlags: 0
