@@ -4130,6 +4130,8 @@ GameObject:
   - component: {fileID: 1513648910}
   - component: {fileID: 1513648911}
   - component: {fileID: 1513648912}
+  - component: {fileID: 1513648913}
+  - component: {fileID: 1513648914}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -4222,6 +4224,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e17722028f8aa4b459ad361cf3fdf830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1513648913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513648907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e59ad9d60fd6040a75cc14b28b5544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1513648914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513648907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791c38e8c95a340418addc4948c9e488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fl_min_cam_height: -1
+  fl_max_cam_height: 3
+  fl_cam_distance: 2.5
+  fl_mouse_turn_rate: 90
+  fl_cam_speed: 2
+  bl_invert: 0
+  GO_PC_camera: {fileID: 0}
 --- !u!1 &1549337122
 GameObject:
   m_ObjectHideFlags: 0
