@@ -2,24 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animations : MonoBehaviour
-{
+public class Animations : MonoBehaviour{
     private Animator anim;
 
     void Start()
     {
-        anim = GetComponent<Animator>();  
-
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+        anim = GetComponent<Animator>();
+    }
+        void Update()
         {
-            anim.SetBool("isRunning", true);
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+            {
+                anim.SetBool("isRunning", true);
 
-        }
-        else
-        {
-            anim.SetBool("isRunning", false);
+            }
+            else
+            {
+                anim.SetBool("isRunning", false);
+            }
         }
     }
-}

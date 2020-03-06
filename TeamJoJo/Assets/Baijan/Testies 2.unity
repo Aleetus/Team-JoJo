@@ -1154,7 +1154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345664961}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: -0.041, z: 1.727}
+  m_LocalPosition: {x: -0, y: -0.389, z: 1.727}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 1513648909}
@@ -4129,7 +4129,6 @@ GameObject:
   - component: {fileID: 1513648908}
   - component: {fileID: 1513648910}
   - component: {fileID: 1513648911}
-  - component: {fileID: 1513648912}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -4164,7 +4163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513648907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 132.705, y: 15.082, z: 88.685}
+  m_LocalPosition: {x: 132.705, y: 15.323, z: 88.685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 341898204}
@@ -4203,26 +4202,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 0.25
+  m_Radius: 0.25
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &1513648912
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513648907}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.29882812, y: 0.44873333, z: 1}
-  m_Center: {x: 0.0010681152, y: 0.22277784, z: 0}
 --- !u!1 &1549337122
 GameObject:
   m_ObjectHideFlags: 0
