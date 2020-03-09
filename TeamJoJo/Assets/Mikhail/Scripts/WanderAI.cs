@@ -59,13 +59,13 @@ public class WanderAI : MonoBehaviour
         if(rotateLorR == 1)
         {
             isRotatingRight = true;
-            yield return new WaitForSeconds(rotTime)
+            yield return new WaitForSeconds(rotTime);
             isRotatingRight = false;
         }
         if (rotateLorR == 2)
         {
             isRotatingLeft = true;
-            yield return new WaitForSeconds(rotTime)
+            yield return new WaitForSeconds(rotTime);
             isRotatingLeft = false;
         }
         isWandering = false;
