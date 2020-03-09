@@ -11,8 +11,8 @@ public class Animations : MonoBehaviour {
     }
 
         void Update(){
-            if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow)
-                || Input.GetKey(KeyCode.DownArrow)) 
+            if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W)
+                || Input.GetKey(KeyCode.S)) 
             {
                 anim.SetBool("isRunning", true);
 
