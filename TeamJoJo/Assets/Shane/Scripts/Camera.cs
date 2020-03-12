@@ -8,8 +8,8 @@ public class Camera : MonoBehaviour
     public float fl_min_cam_height = -1F;
     public float fl_max_cam_height = 3F;
     public float fl_cam_distance = 2.5F;
-    public float fl_mouse_turn_rate = 90;
-    public float fl_cam_speed = 2;
+    public float fl_mouse_turn_rate = 5;
+    public float fl_cam_speed = 1;
     public bool bl_invert;
     public GameObject GO_PC_camera;
 
