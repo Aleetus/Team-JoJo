@@ -21,13 +21,13 @@ public class Inventory : MonoBehaviour
             Debug.Log("hah yeah");
             text.text = "haha yeah";
         }
+
+
     }
-
-
-
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("here");
         currentObject = other.gameObject.GetComponent<PickUp>();
     }
+
 }
