@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class LeafDestroy : MonoBehaviour
 {
+
     void Start()
     {
 
-        Destroy(gameObject, 8);
+        Destroy(gameObject, 4);
 
     }
 
