@@ -5,15 +5,20 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     public AudioClip sound;
-    public bool hasApple;
+    Inventory inv;
 
-    private void OnTriggerEnter(Collider collider)
+    void Start()
+    {
+        inv = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+    }
+
+    void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
         {
             print("Item picked up");
-            Destroy(gameObject);
-            hasApple = true;
+            inv.PickUpItem(this);
+            //hasApple = true;
         }
     }
 

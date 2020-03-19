@@ -5,12 +5,18 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    HUD hud;
     PickUp currentObject;
-    public Text text;
+    public AudioClip pickUpSound;
+    public AudioClip munchSound;
+
+    //public Text text;
     // Start is called before the first frame update
     void Start()
     {
-        
+        hud = GameObject.FindGameObjectWithTag("Respawn").GetComponent<HUD>();
+        if (hud == null)
+            Debug.Log("!!!Warning!!! No HUD found. Set HUD tag to \"Respawn\" to fix");
     }
 
     // Update is called once per frame
@@ -18,16 +24,39 @@ public class Inventory : MonoBehaviour
     {
         if(currentObject != null)
         {
-            Debug.Log("hah yeah");
-            text.text = "haha yeah";
+            currentObject.gameObject.SetActive(false);
+
+            //SHOW APPLE LOGO
+
+            //Debug.Log("hah yeah");
+            //text.text = "haha yeah";
         }
-
-
     }
-    void OnTriggerEnter(Collider other)
+    public bool HasItem()
     {
-        Debug.Log("here");
-        currentObject = other.gameObject.GetComponent<PickUp>();
+        if (currentObject != null)
+            return true;
+        else
+            return false;
     }
 
+    public void PickUpItem(PickUp item)
+    {
+        //PLAY SOUND HERE
+        currentObject = item;
+        hud.DisplayMessage("Apple acquired");
+        hud.ToggleImage();
+    }
+
+    public void DropItem()
+    {
+        //PLAY MUNCH SOUND HERE
+        hud.ToggleImage();
+        
+        if (currentObject == null)
+            return;
+        //just deletes for now
+        //Destroy(currentObject);
+        currentObject = null;
+    }
 }
