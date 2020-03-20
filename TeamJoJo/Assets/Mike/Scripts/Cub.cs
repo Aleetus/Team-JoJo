@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class Cub : MonoBehaviour
 {
+    public string eatMessage;
+    public string cubMessage;
     public Color color;
     //public GameObject newWox;
     HUD hud;
@@ -49,11 +51,11 @@ public class Cub : MonoBehaviour
                         mat.color = color;
                         player.GetComponent<Inventory>().DropItem();
                         following = true;
-                        hud.DisplayMessage(" ''That was delicious! Take me home now mum :)'' ");
+                        hud.DisplayMessage(eatMessage);
                     }
                 }
                 else
-                    hud.DisplayMessage("Niara: Can you find me a fruit mummy?" + "\n \n Task: Return with an apple to feed your cub");
+                    hud.DisplayMessage(cubMessage + "\n \n Task: Return with a fruit to feed your cub");
             }
         }
         else
