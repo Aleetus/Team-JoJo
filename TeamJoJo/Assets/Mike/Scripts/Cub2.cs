@@ -39,7 +39,7 @@ public class Cub2 : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, player.transform.position) < 2.5f)
             {
-                if (player.GetComponent<Inventory>().HasItem())
+                if (player.GetComponent<Inventory2>().HasItem())
                 {
                     hud.DisplayMessage("Press E to feed");
                     //HERE WE CHANGE
@@ -47,14 +47,13 @@ public class Cub2 : MonoBehaviour
                     if (Input.GetKey(KeyCode.E))
                     {
                         mat.color = color;
-                        player.GetComponent<Inventory>().DropItem();
+                        player.GetComponent<Inventory2>().DropItem();
                         following = true;
-                        hud.DisplayMessage(" ''That was delicious! Take me home now mum :)'' ");
+                        hud.DisplayMessage("Maru: That was delicious... and WOW look at my coat!!!" + "\n \n Task: Return home with Maru");
                     }
                 }
                 else
-                    hud.DisplayMessage("Niara: Can you find me a fruit mummy?" +
-                        "Return with an apple to feed your cub");
+                    hud.DisplayMessage("Maru: A little birdy told me a Pink fruit will change my fur!?" + "\n \n Task: Return with a Pink fruit to feed your cub");
             }
         }
         else

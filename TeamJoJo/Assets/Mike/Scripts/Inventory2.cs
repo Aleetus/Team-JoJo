@@ -1,63 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Inventory : MonoBehaviour
+public class PickUp2 : MonoBehaviour
 {
-    HUD hud;
-    PickUp currentObject;
-    public AudioClip pickUpSound;
-    public AudioClip munchSound;
+    public AudioClip sound;
+    Inventory2 inv2;
 
-    //public Text text;
-    // Start is called before the first frame update
     void Start()
     {
-        hud = GameObject.FindGameObjectWithTag("Respawn").GetComponent<HUD>();
-        if (hud == null)
-            Debug.Log("!!!Warning!!! No HUD found. Set HUD tag to \"Respawn\" to fix");
+        inv2 = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory2>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider collider)
     {
-        if (currentObject != null)
+        if (collider.gameObject.tag == "Player")
         {
-            currentObject.gameObject.SetActive(false);
-
-            //SHOW APPLE LOGO
-
-            //Debug.Log("hah yeah");
-            //text.text = "haha yeah";
+            print("Item picked up");
+            inv2.PickUpItem(this);
+            //hasApple = true;
         }
     }
-    public bool HasItem()
-    {
-        if (currentObject != null)
-            return true;
-        else
-            return false;
-    }
 
-    public void PickUpItem(PickUp item)
-    {
-        //pickUpSound.
-        AudioSource.PlayClipAtPoint(pickUpSound, transform.position);
-        currentObject = item;
-        hud.DisplayMessage("A tasty fruit! Take it to your cub.");
-        hud.ToggleImage();
-    }
-
-    public void DropItem()
-    {
-
-        hud.ToggleImage();
-        AudioSource.PlayClipAtPoint(munchSound, transform.position);
-        if (currentObject == null)
-            return;
-        //just deletes for now
-        //Destroy(currentObject);
-        currentObject = null;
-    }
 }
