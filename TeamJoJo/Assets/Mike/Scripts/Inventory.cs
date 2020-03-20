@@ -12,7 +12,6 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    
         hud = GameObject.FindGameObjectWithTag("Respawn").GetComponent<HUD>();
         if (hud == null)
             Debug.Log("!!!Warning!!! No HUD found. Set HUD tag to \"Respawn\" to fix");
@@ -21,7 +20,7 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentObject != null)
+        if (currentObject != null)
         {
             currentObject.gameObject.SetActive(false);
 
@@ -43,6 +42,7 @@ public class Inventory : MonoBehaviour
     {
         currentObject = item;
         hud.DisplayMessage(pickUpText);
+        hud.ToggleImage();
     }
 
     public void DropItem()
@@ -50,7 +50,7 @@ public class Inventory : MonoBehaviour
         if (currentObject == null)
             return;
         //just deletes for now
-        Destroy(currentObject);
+        //Destroy(currentObject);
         currentObject = null;
     }
 }

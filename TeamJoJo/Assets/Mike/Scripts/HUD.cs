@@ -42,6 +42,8 @@ public class HUD : MonoBehaviour
 
     public void ToggleImage()
     {
+
+        print("bollocks");
         if(!image.activeSelf)
             image.gameObject.SetActive(true);
         else
