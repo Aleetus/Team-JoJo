@@ -27,7 +27,7 @@ public class MessageArea : MonoBehaviour
         
         if (other.gameObject.GetComponent<Movement>() != null)
         {
-            //PLAY SOUND HERE
+            AudioSource.PlayClipAtPoint(animalSound, transform.position);
         }
     }
 

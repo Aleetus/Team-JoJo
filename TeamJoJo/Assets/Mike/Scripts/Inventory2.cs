@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Inventory2 : MonoBehaviour
+public class Inventory : MonoBehaviour
 {
     HUD hud;
     PickUp currentObject;
@@ -22,7 +22,7 @@ public class Inventory2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentObject != null)
+        if (currentObject != null)
         {
             currentObject.gameObject.SetActive(false);
 
@@ -51,7 +51,7 @@ public class Inventory2 : MonoBehaviour
 
     public void DropItem()
     {
-        
+
         hud.ToggleImage();
         AudioSource.PlayClipAtPoint(munchSound, transform.position);
         if (currentObject == null)

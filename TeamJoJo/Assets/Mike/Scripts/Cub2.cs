@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Cub : MonoBehaviour
+public class Cub2 : MonoBehaviour
 {
     public Color color;
     //public GameObject newWox;
@@ -17,7 +17,7 @@ public class Cub : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+
         mat = GetComponentInChildren<Renderer>().material;
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
@@ -53,12 +53,13 @@ public class Cub : MonoBehaviour
                     }
                 }
                 else
-                    hud.DisplayMessage("Niara: Can you find me a fruit mummy?" + "\n \n Task: Return with an apple to feed your cub");
+                    hud.DisplayMessage("Niara: Can you find me a fruit mummy?" +
+                        "Return with an apple to feed your cub");
             }
         }
         else
         {
-            if(agent.velocity.magnitude > 0.5f)
+            if (agent.velocity.magnitude > 0.5f)
                 anim.SetBool("IsRunning", true);
             else
                 anim.SetBool("IsRunning", false);
